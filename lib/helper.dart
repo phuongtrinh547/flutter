@@ -90,7 +90,7 @@ class Helper {
     final http.Response response = await http.get(
       Uri.parse(linkProfile),
       headers: <String, String>{
-        'Content-Type': 'aplication/json; charset=UTF-8',
+        'Content-Type': 'application/json; charset=UTF-8',
         'Authorization': 'Bearer ' + Token.value,
         'Accept': 'application/json',
       },
@@ -100,7 +100,7 @@ class Helper {
     debugPrint(response.body);
     if (response.statusCode == 200) {
       var body = jsonDecode(response.body);
-      Profile.fromJson(body['data']);
+      Profile.fromJson(body["data"]);
       Helper.newUniquePage(context, MyAccountPage());
     } else {
       // throw Exception('Khong xac dinh loi trong dang ky');

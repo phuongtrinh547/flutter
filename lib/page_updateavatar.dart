@@ -66,6 +66,7 @@ class _PageUpdateAvatarState extends State<PageUpdateAvatar> {
   void start_upload() {
     if (tmpFile != null) {
       String filename = tmpFile!.path().split('/').last;
+      upload(filename);
     }
   }
 
@@ -73,7 +74,7 @@ class _PageUpdateAvatarState extends State<PageUpdateAvatar> {
     var request =
         http.MultipartRequest('POST', Uri.parse(Helper.linkUploadavatar));
     Map<String, String> headers = {
-      "Accept": "Application/json",
+      "Accept": "application/json",
       "Content-Type": "mutipart/form_data",
       "Authorization": "Bearer " + Token.value,
     };

@@ -1,3 +1,5 @@
+import 'package:bai_1/page_updateavatar.dart';
+
 import 'page_updateprofile.dart';
 import 'profile.dart';
 import 'package:flutter/material.dart';
@@ -32,12 +34,14 @@ class MyAccountPage extends StatelessWidget {
                         width: 80,
                         child: FadeInImage.assetNetwork(
                           placeholder: 'assets/images/spinner.gif',
-                          image: Profile.avartar,
+                          image: Profile.avatar,
                         ),
                       ),
                     ),
                     TextButton.icon(
-                      onPressed: () {},
+                      onPressed: () {
+                        Helper.nextPage(context, PageUpdateAvatar());
+                      },
                       icon: const Icon(Icons.camera_alt_rounded),
                       label: const Text('change'),
                     ),
@@ -54,7 +58,7 @@ class MyAccountPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Tên: ${Profile.fisrt_name} ${Profile.last_name}'),
+                  Text('Tên: ${Profile.first_name} ${Profile.last_name}'),
                   const SizedBox(
                     height: 10,
                   ),

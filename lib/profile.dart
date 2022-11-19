@@ -2,10 +2,10 @@ class Profile {
   static int id = 0;
   static String username = "";
   static String email = "";
-  static String fisrt_name = "";
+  static String first_name = "";
   static String last_name = "";
   static String phone = "";
-  static String avartar = "";
+  static String avatar = "";
   static String address = "";
   static int role_id = 0;
   Profile();
@@ -13,10 +13,10 @@ class Profile {
     id = json['id'];
     username = json['username'];
     email = json['email'];
-    fisrt_name = json['fisrt_name'];
+    first_name = json['first_name'];
     last_name = json['last_name'];
     phone = json['phone'];
-    avartar = json['avartar'];
+    avatar = json['avatar'];
     address = json['address'];
     role_id = json['role_id'];
     return Profile();

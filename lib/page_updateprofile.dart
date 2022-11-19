@@ -90,7 +90,7 @@ class _PageUpdateProfileState extends State<PageUpdateProfile> {
                 child: Column(
                   children: [
                     createTextFormFieldUpdate(
-                        'First Name', Profile.fisrt_name, update_firstname),
+                        'First Name', Profile.first_name, update_firstname),
                     createTextFormFieldUpdate(
                         'Last Name', Profile.last_name, update_lastname),
                     createTextFormFieldUpdate(
